@@ -136,6 +136,7 @@ AUTH_USER_MODEL = 'accounts.User'
 # Heroku settings
 
 import dj_database_url
+
 DATABASES = {
     'default': dj_database_url.config(),
 }
@@ -149,9 +150,6 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
 try:
     from simplemooc.local_settings import *
