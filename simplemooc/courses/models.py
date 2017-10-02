@@ -84,7 +84,7 @@ class Material(models.Model):
 	embedded = models.TextField('Vídeo embedded', blank=True)
 	file = models.FileField(upload_to='lessons/materials', blank=True, null=True)
 
-	lesson = models.ForeignKey(Lesson, verbose_name='Aula', related_name='meterials')
+	lesson = models.ForeignKey(Lesson, verbose_name='Aula', related_name='materials')
 
 	def is_embedded(self):
 		return bool(self.embedded)
